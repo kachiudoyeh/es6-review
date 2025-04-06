@@ -1,9 +1,9 @@
 
-
 export class Student {
     name;
     level;
     department;
+    courses = [];
 
     constructor(name, level, department){
         this.name = name;
@@ -34,6 +34,43 @@ export class Student {
     setDepartment(department) {
         this.department = department;
     }
+
+    setCourses(courses){
+        this.courses = courses;
+    }
+
+    getCourses(){
+        return this.courses;
+    }
+}
+
+
+export class Course {
+    name;
+    code;
+
+    constructor(name, code) {
+        this.name = name;
+        this.code = code;
+    }
+
+    getName() {
+        return this.name;
+    }
+
+    setName(name){
+        this.name = name;
+    }
+
+    getCode(){
+        return this.code;
+    }
+
+    setCode(code){
+        this.code = code;
+    }
+
+
 }
 
 
@@ -49,11 +86,11 @@ export function resolveAfter2Seconds() {
   }
   
 
-  const fruits = new Map([
+const fruits = new Map([
     ["apples", 500],
     ["bananas", 300],
     ["oranges", 200]
-    ]);
+]);
 
 export const grades = new Map();
 
